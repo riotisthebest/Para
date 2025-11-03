@@ -1,0 +1,12 @@
+if not isfile("Para2.mp3") then
+    local Para2 = game:HttpGet("https://github.com/riotisthebest/Para/raw/refs/heads/main/Para2.mp3")
+    writefile("Para2.mp3", Para2)
+end
+for i = 1, 1 do
+    local sound = Instance.new("Sound", workspace)
+    sound.SoundId = getcustomasset("Para2.mp3")
+    sound.EmitterSize = 10000 -- decrease the emitter size (for earlier volume drop off)
+    sound.Looped = true
+    sound:Play()
+    sound.Volume = 9e9
+end
